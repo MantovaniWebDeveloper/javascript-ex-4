@@ -1,5 +1,5 @@
-//chiedo all'utente un numero da 1 a 5
-var numeroUtente = parseInt(prompt("inserisca un numero da 1 a 5"));
+//chiedo all'utente un numero da 1 a 5 e se pari o Dispari
+var pariDispariUtente = prompt("Pari o Dispari ?");
 console.log(numeroUtente);
 
 //generiamo numero random per il pc da 1 a 5
@@ -8,17 +8,22 @@ function numeroRandom(numeroMin, numeroMax){
   var numRandomRisultante = Math.floor(Math.random() * (numeroMax - numeroMin + 1) - numeroMin);
   return numRandomRisultante;
 }
-
+//lancio la funzione per l'user
+var randomUser = numeroRandom(1,6);
 //lancio la funzione per la cpu
-var randomCpu = numeroRandom(1,6);
-console.log(randomCpu);
+var randomCpuPariDispari = numeroRandom(0,1);
 
-if (numeroUtente > randomCpu) {
-  console.log("Utente hai vitnto");
-}
-else if (numeroUtente == randomCpu) {
-  console.log("pareggio");
+if (randomCpuPariDispari == 0) {
+  randomCpuPariDispari = "pari"
 }
 else {
-  console.log("CPU VINCE");
+  randomCpuPariDispari = "dispari"
+}
+var randomCpu = numeroRandom(1,6);
+console.log("numero random user: " + randomUser);
+console.log("pari o dispari cpu: " + randomCpuPariDispari);
+console.log("numero random cpu: " + randomCpu);
+
+if ((randoUser + randomCpu) % 2 == 0) {
+
 }
