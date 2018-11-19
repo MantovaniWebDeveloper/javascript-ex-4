@@ -8,10 +8,9 @@ function controlloPalindromo(parolaUtente) {
   //setto una variabile in modalita false da cambiare in caso di
   //parola palindroma
   var palindroma = false;
-  var arrayParola = [];
-  for (var i = 0; i < parolaUtente.length ; i++) {
-    console.log(parolaUtente[i]);
-  }
+  var parolaUtenteReverse = parolaUtente.reverse();
+  console.log("parola al rovescio: " + parolaUtenteReverse);
+
   //faccio un confronto tra la versione della parola normale
   // e la stessa parola letta ne senso opposto
   //ritorno il risultato
