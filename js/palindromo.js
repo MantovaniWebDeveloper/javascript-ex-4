@@ -9,7 +9,7 @@ function controlloPalindromo(parolaUtente) {
   //parola palindroma
   var palindroma = false;
   var parolaUtenteReverse = parolaUtente.reverse();
-  console.log("parola al rovescio: " + parolaUtenteReverse);
+  console.log("parola al rovescio: " +parolaUtenteReverse);
 
   //faccio un confronto tra la versione della parola normale
   // e la stessa parola letta ne senso opposto
