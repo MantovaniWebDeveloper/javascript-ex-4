@@ -3,11 +3,12 @@ var parolaUtente = prompt("Inserisci la parola");
 
 console.log("Stringa ricevuta dall'utente: " + parolaUtente)
 
+
 //creo una funzione per controllare la parola
 function controlloPalindromo(parolaUtente) {
   //setto una variabile in modalita false da cambiare in caso di
   //parola palindroma
-  var palindroma = false;
+  var palindromo = false;
   console.log(parolaUtente.length)
   var parolaRovesciata = [];
 
@@ -16,10 +17,18 @@ function controlloPalindromo(parolaUtente) {
     parolaRovesciata.push(parolaUtente[i]);
   }
 
-  console.log(parolaRovesciata);
+  console.log(parolaRovesciata.toString());
   //faccio un confronto tra la versione della parola normale
   // e la stessa parola letta ne senso opposto
   //ritorno il risultato
+  if (parolaUtente == parolaRovesciata) {
+    palindromo = true;
+  }
+  else {
+    palindromo = false;
+  }
+
+  return palindromo
 }
  //richiamo la funzione in variabile
  var risultato = controlloPalindromo(parolaUtente);
