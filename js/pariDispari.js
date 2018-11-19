@@ -1,6 +1,6 @@
 //chiedo all'utente un numero da 1 a 5 e se pari o Dispari
 var pariDispariUtente = prompt("Pari o Dispari ?");
-console.log(numeroUtente);
+console.log(pariDispariUtente);
 
 //generiamo numero random per il pc da 1 a 5
 //passando tra gli argomenti 2 valori
@@ -20,10 +20,15 @@ else {
   randomCpuPariDispari = "dispari"
 }
 var randomCpu = numeroRandom(1,6);
+
 console.log("numero random user: " + randomUser);
 console.log("pari o dispari cpu: " + randomCpuPariDispari);
 console.log("numero random cpu: " + randomCpu);
 
-if ((randoUser + randomCpu) % 2 == 0) {
-
+function sommaNumeri (numeroUtente, numeroCPU) {
+   var somma = numeroUtente + numeroCPU;
+   return somma;
 }
+
+var risultatoSomma = sommaNumeri(randomUser,randomCpu);
+console.log("risultato somma: " + risultatoSomma);
